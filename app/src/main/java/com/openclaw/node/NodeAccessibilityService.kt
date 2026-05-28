@@ -227,7 +227,15 @@ class NodeAccessibilityService : AccessibilityService() {
             extractTextNodes(root, nodes)
 
             org.json.JSONObject().apply {
-                put("textContent", nodes.joinToString("\n") { it.optString("text", "") })
+                val textBuilder = StringBuilder()
+                for (i in 0 until nodes.length()) {
+                    val node = nodes.optJSONObject(i)
+                    if (node != null) {
+                        if (textBuilder.isNotEmpty()) textBuilder.append('\n')
+                        textBuilder.append(node.optString("text", ""))
+                    }
+                }
+                put("textContent", textBuilder.toString())
                 put("nodes", nodes)
                 put("nodeCount", nodes.length())
             }.toString()
