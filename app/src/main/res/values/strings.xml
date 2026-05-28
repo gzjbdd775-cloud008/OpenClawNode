@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenClaw Node</string>
+    <string name="connection_status">Connection Status</string>
+    <string name="gateway_url_label">Gateway URL</string>
+    <string name="bootstrap_token_label">Bootstrap Token</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_disconnect">Disconnect</string>
+    <string name="btn_accessibility">Toggle Accessibility</string>
+    <string name="btn_screen_capture">Toggle Screen Capture</string>
+    <string name="status_log">Status Log</string>
+    <string name="channel_name_gateway">Gateway Connection</string>
+    <string name="notification_connected">Connected to Gateway</string>
+    <string name="notification_disconnected">Disconnected</string>
+</resources>
